@@ -18,7 +18,7 @@
 #           %rdi holds the return status
 #
 
-# Changes from 32 bit:
+# 64 BIT CHANGES:
 #           movl -> movq
 #           command number for exiting $1 -> $60
 #           eax  -> rax
