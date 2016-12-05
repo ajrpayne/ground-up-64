@@ -18,11 +18,11 @@
 #           %rdi holds the return status
 #
 
-# 64 BIT CHANGES:
+# CHANGES:
 #           movl -> movq
 #           command number for exiting $1 -> $60
-#           eax  -> rax
-#           ebx  -> rdi
+#           eax -> rax
+#           ebx -> rdi
 #           int $0x80 -> syscall
 #
 
