@@ -43,5 +43,5 @@ jmp start_loop                      # jump to loop beginning
 loop_exit:
 # %rdi is the status code for the exit system call
 # and it already has the maximum number
-movq $60, %rax
+movq $60, %rax                      # 60 is the exit() syscall
 syscall

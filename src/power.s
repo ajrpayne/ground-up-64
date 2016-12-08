@@ -14,18 +14,16 @@
 
 .globl _start
 _start:
-pushq $3                            # push second argument
-pushq $2                            # push first argument
+movq $3, %rsi                       # push second argument
+movq $2, %rdi                       # push first argument
 call  power                         # call the function
-addq  $16, %rsp                     # move the stack pointer back
 
 pushq %rax                          # save the first answer before
                                     # calling the next function
 
-pushq $2                            # push second argument
-pushq $5                            # push first argument
+movq $2, % rsi                      # push second argument
+movq $5, % rdi                      # push first argument
 call  power                         # call the function
-addq  $16, %rsp                     # move the stack pointer back
 
 popq  %rdi                          # The second answer is already
                                     # in %rax. We saved the
