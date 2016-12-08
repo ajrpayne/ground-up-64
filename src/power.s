@@ -64,18 +64,16 @@ pushq %rbp                          # save old base pointer
 movq  %rsp, %rbp                    # make stack pointer the base pointer
 subq  $8, %rsp                      # get room for our local storage
 
-movq  16(%rbp), %rdi                # put first argument in %rdi
-movq  24(%rbp), %rsi                # put second argument in %rsi
-
 movq  %rdi, -8(%rbp)                # store current result
 
 power_loop_start:
 cmpq  $1, %rsi                      # if the power is 1, we are done
 je    end_power
+
 movq  -8(%rbp), %rax                # move the current result into %rax
 imulq %rdi, %rax                    # multiply the current result by
-                                    # the base number
-movq  %rax, -8(%rbp)                # store the current result
+movq  %rax, -8(%rbp)                # the base number
+                                    # store the current result
 
 decq  %rsi                          # decrease the power
 jmp   power_loop_start              # run for the next power
