@@ -1,20 +1,3 @@
-# CHANGES:
-#           movl -> movq
-#           command number for exiting $1 -> $60
-#           eax -> rax
-#           ebx -> rdi
-#           int $0x80 -> syscall
-#           cmpl -> cmpq
-#           pushl -> pushq
-#           addl -> addq
-#           esp -> rsp
-#           popl -> popq
-#           ecx -> rsi
-#           ebp -> rbp
-#           subl -> subq
-#           imull -> imulq
-#           decl -> decq
-#
 
 # PURPOSE:  Program to illustrate how functions work
 #           This program will compute the value of

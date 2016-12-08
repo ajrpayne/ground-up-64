@@ -1,10 +1,3 @@
-# CHANGES:
-#           movl -> movq
-#           command number for exiting $1 -> $60
-#           eax -> rax
-#           ebx -> rdi
-#           int $0x80 -> syscall
-#
 
 # PURPOSE:  Simple program that exits and returns a
 #           status code back to the Linux kernel

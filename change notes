@@ -1,0 +1,35 @@
+CHANGES:
+
+movl -> movq
+
+pushl -> pushq
+popl -> popq
+
+addl -> addq
+subl -> subq
+
+cmpl -> cmpq
+
+incl -> incq
+decl -> decq
+
+imull -> imulq
+
+eax -> rax
+ebx -> rdi
+ecx -> rsi
+edx -> rdx
+esi -> r10
+edi -> r8
+
+Linux 32-bit kernal calling convention
+%ebx, %ecx, %edx, %esi, %edi, %ebp
+
+Linux 64-bit kernal calling convention
+%rdi, %rsi, %rdx, %r10, %r8 and %r9.
+
+esp -> rsp
+ebp -> rbp
+
+int $0x80 -> syscall
+command number for exiting $1 -> $60

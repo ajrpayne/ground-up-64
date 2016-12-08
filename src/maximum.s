@@ -1,14 +1,3 @@
-# CHANGES:
-#           movl -> movq
-#           command number for exiting $1 -> $60
-#           eax -> rax
-#           ebx -> rdi
-#           int $0x80 -> syscall
-#           .long (4 addresses) -> .quad (8 addresses)
-#           edi -> r8
-#           cmpl -> cmpq
-#           incl -> incq
-#
 
 # PURPOSE:  This program finds the maximum number of a
 #           set of data items.
