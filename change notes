@@ -26,7 +26,7 @@ Linux 32-bit kernal calling convention
 %ebx, %ecx, %edx, %esi, %edi, %ebp
 
 Linux 64-bit kernal calling convention
-%rdi, %rsi, %rdx, %r10, %r8 and %r9.
+%rdi, %rsi, %rdx, %r10, %r8, %r9
 
 esp -> rsp
 ebp -> rbp
