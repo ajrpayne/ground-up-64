@@ -1,3 +1,11 @@
+# CHANGES:
+#           movl -> movq
+#           command number for exiting $1 -> $60
+#           eax -> rax
+#           ebx -> rdi
+#           int $0x80 -> syscall
+#
+
 # PURPOSE:  Simple program that exits and returns a
 #           status code back to the Linux kernel
 #
@@ -18,17 +26,10 @@
 #           %rdi holds the return status
 #
 
-# CHANGES:
-#           movl -> movq
-#           command number for exiting $1 -> $60
-#           eax -> rax
-#           ebx -> rdi
-#           int $0x80 -> syscall
-#
-
 .section .data
 
 .section .text
+
 .globl _start
 _start:
 movq $60, %rax      # this is the linux kernel command
