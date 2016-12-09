@@ -72,8 +72,8 @@ je    end_power
 
 movq  -8(%rbp), %rax                # move the current result into %rax
 imulq %rdi, %rax                    # multiply the current result by
-movq  %rax, -8(%rbp)                # the base number
-                                    # store the current result
+                                    # the base number
+movq  %rax, -8(%rbp)                # store the current result
 
 decq  %rsi                          # decrease the power
 jmp   power_loop_start              # run for the next power
