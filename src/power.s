@@ -14,15 +14,15 @@
 
 .globl _start
 _start:
-movq $3, %rsi                       # push second argument
-movq $2, %rdi                       # push first argument
+movq $3, %rsi                       # move second argument
+movq $2, %rdi                       # move first argument
 call  power                         # call the function
 
 pushq %rax                          # save the first answer before
                                     # calling the next function
 
-movq $2, % rsi                      # push second argument
-movq $5, % rdi                      # push first argument
+movq $2, % rsi                      # move second argument
+movq $5, % rdi                      # move first argument
 call  power                         # call the function
 
 popq  %rdi                          # The second answer is already

@@ -4,7 +4,7 @@ BINDIR   = bin
 
 MKDIR = mkdir -p
 
-all: dirs exit maximum power
+all: dirs exit maximum power factorial
 
 $(OBJDIR)/:
 	$(MKDIR) $(OBJDIR)/
@@ -41,6 +41,15 @@ $(BINDIR)/power: $(OBJDIR)/power.o
 
 .PHONY: power
 power: $(BINDIR)/power
+
+$(OBJDIR)/factorial.o: $(SRCDIR)/factorial.s
+	as $(SRCDIR)/factorial.s -o $(OBJDIR)/factorial.o
+
+$(BINDIR)/factorial: $(OBJDIR)/factorial.o
+	ld $(OBJDIR)/factorial.o -o $(BINDIR)/factorial
+
+.PHONY: factorial
+factorial: $(BINDIR)/factorial
 
 .PHONY: clean
 clean:
